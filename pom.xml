@@ -20,7 +20,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>2.53.0</version>
+      <version>2.53.1</version>
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -149,7 +149,7 @@
     <profile>
       <id>testhost</id>
       <properties>
-        <site.url>http://testhost/</site.url>
+        <site.url>http://barancev.w.pw/</site.url>
       </properties>
     </profile>
     <profile>
