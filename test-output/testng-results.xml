@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="111401" started-at="2016-07-15T20:20:02Z" finished-at="2016-07-15T20:21:54Z">
+  <suite name="Default suite" duration-ms="4038" started-at="2016-07-27T19:48:11Z" finished-at="2016-07-27T19:48:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="111401" started-at="2016-07-15T20:20:02Z" finished-at="2016-07-15T20:21:54Z">
-      <class name="ru.stqa.selenium.LoginTest">
-        <test-method status="PASS" signature="initTestSuite()[pri:0, instance:ru.stqa.selenium.LoginTest@7ed7259e]" name="initTestSuite" is-config="true" duration-ms="61" started-at="2016-07-15T23:20:02Z" finished-at="2016-07-15T23:20:02Z">
+    <test name="Default test" duration-ms="4038" started-at="2016-07-27T19:48:11Z" finished-at="2016-07-27T19:48:15Z">
+      <class name="ru.stqa.selenium.Addmovie">
+        <test-method status="PASS" signature="initTestSuite()[pri:0, instance:ru.stqa.selenium.Addmovie@77caeb3e]" name="initTestSuite" is-config="true" duration-ms="47" started-at="2016-07-27T22:48:11Z" finished-at="2016-07-27T22:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTestSuite -->
-        <test-method status="PASS" signature="initWebDriver()[pri:0, instance:ru.stqa.selenium.LoginTest@7ed7259e]" name="initWebDriver" is-config="true" duration-ms="2857" started-at="2016-07-15T23:20:02Z" finished-at="2016-07-15T23:20:05Z">
+        <test-method status="PASS" signature="initWebDriver()[pri:0, instance:ru.stqa.selenium.Addmovie@77caeb3e]" name="initWebDriver" is-config="true" duration-ms="2178" started-at="2016-07-27T22:48:11Z" finished-at="2016-07-27T22:48:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initWebDriver -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:ru.stqa.selenium.LoginTest@7ed7259e]" name="testLogin" duration-ms="79539" started-at="2016-07-15T23:20:05Z" finished-at="2016-07-15T23:21:25Z">
+        <test-method status="PASS" signature="testAddmovie()[pri:0, instance:ru.stqa.selenium.Addmovie@77caeb3e]" name="testAddmovie" duration-ms="1854" started-at="2016-07-27T22:48:13Z" finished-at="2016-07-27T22:48:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ru.stqa.selenium.LoginTest@7ed7259e]" name="tearDown" is-config="true" duration-ms="243" started-at="2016-07-15T23:21:54Z" finished-at="2016-07-15T23:21:54Z">
+        </test-method> <!-- testAddmovie -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ru.stqa.selenium.Addmovie@77caeb3e]" name="tearDown" is-config="true" duration-ms="203" started-at="2016-07-27T22:48:15Z" finished-at="2016-07-27T22:48:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- ru.stqa.selenium.LoginTest -->
+      </class> <!-- ru.stqa.selenium.Addmovie -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
