@@ -3,9 +3,6 @@ package ru.stqa.selenium;
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
-
-//import java.io.File;
-//import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
