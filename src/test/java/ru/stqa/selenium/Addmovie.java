@@ -3,9 +3,7 @@ package ru.stqa.selenium;
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
-import java.io.PrintWriter;
-import java.io.FileOutputStream;
-import java.io.FileNotFoundException;
+import org.testng.Assert;
 
 public class Addmovie extends TestNgTestBase{
 
@@ -15,17 +13,6 @@ public class Addmovie extends TestNgTestBase{
 
   int count_start=0, count_finish=0;  // counters of movies before and after adding
 
-// creating report file  
-    PrintWriter repfile = null;
-         try
-         {
-            repfile = new PrintWriter(new FileOutputStream("Admovie_rep.txt"));
-         }
-         catch(FileNotFoundException e)
-         {
-             System.out.println("Ошибка открытия файла Admovie_rep.txt");
-             System.exit(0);
-         }    
     
 // Login block    
     driver.get(baseUrl + "/php4dvd/");
@@ -73,16 +60,10 @@ public class Addmovie extends TestNgTestBase{
 
     // count quantity of movies after adding
     count_finish = driver.findElements(By.xpath("//a[contains(@href,'go=movie')]")).size();
+   
     
-    //Check counts and print result into report file
-    if ((count_finish-count_start)==1) {
-    	repfile.println("Correct adding movie Test" + namepart+"\n"); 
-    	repfile.close();
-    	}
-    else { 
-    	repfile.println("Incorrect adding movie Test" + namepart+"\n");
-    	repfile.close();
-    	}
+    Assert.assertTrue((count_finish-count_start)==1); 
+
   }
 
 
