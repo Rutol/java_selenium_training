@@ -3,10 +3,8 @@ package ru.stqa.selenium;
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
-import java.io.PrintWriter;
-import java.io.FileOutputStream;
-import java.io.FileNotFoundException;
 
 public class DelMovieNo extends TestNgTestBase{
 	
@@ -15,17 +13,6 @@ public class DelMovieNo extends TestNgTestBase{
 
     int count_start=0, count_finish=0; // counters of movies before and after adding
 
- // creating report file  
-    PrintWriter repfile = null;
-         try
-         {
-            repfile = new PrintWriter(new FileOutputStream("NoDelmovie_rep.txt"));
-         }
-         catch(FileNotFoundException e)
-         {
-             System.out.println("Ошибка открытия файла NoDelmovie_rep.txt");
-             System.exit(0);
-         }    
    
 // Login block   
     driver.get(baseUrl + "/php4dvd/");
@@ -70,15 +57,7 @@ public class DelMovieNo extends TestNgTestBase{
     // count quantity of movies after adding
     count_finish = driver.findElements(By.xpath("//a[contains(@href,'go=movie')]")).size();
 
-    //Check counts and print result into report file
-    if (count_start==count_finish) {
-    	repfile.println("Correct no-deleting movie\n"); 
-    	repfile.close();
-    	}
-    else { 
-    	repfile.println("Incorrect no-deleting movie\n");
-    	repfile.close();
-    	}
+    Assert.assertTrue(count_start==count_finish);     //Check counts 
     
  }
 
