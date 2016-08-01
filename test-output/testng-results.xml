@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5155" started-at="2016-07-31T21:06:12Z" finished-at="2016-07-31T21:06:18Z">
+  <suite name="Default suite" duration-ms="5089" started-at="2016-08-01T20:12:41Z" finished-at="2016-08-01T20:12:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5155" started-at="2016-07-31T21:06:12Z" finished-at="2016-07-31T21:06:18Z">
+    <test name="Default test" duration-ms="5089" started-at="2016-08-01T20:12:41Z" finished-at="2016-08-01T20:12:46Z">
       <class name="ru.stqa.selenium.SearchMovie">
-        <test-method status="PASS" signature="initTestSuite()[pri:0, instance:ru.stqa.selenium.SearchMovie@91161c7]" name="initTestSuite" is-config="true" duration-ms="50" started-at="2016-08-01T00:06:12Z" finished-at="2016-08-01T00:06:12Z">
+        <test-method status="PASS" signature="initTestSuite()[pri:0, instance:ru.stqa.selenium.SearchMovie@91161c7]" name="initTestSuite" is-config="true" duration-ms="51" started-at="2016-08-01T23:12:41Z" finished-at="2016-08-01T23:12:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTestSuite -->
-        <test-method status="PASS" signature="initWebDriver()[pri:0, instance:ru.stqa.selenium.SearchMovie@91161c7]" name="initWebDriver" is-config="true" duration-ms="2219" started-at="2016-08-01T00:06:12Z" finished-at="2016-08-01T00:06:15Z">
+        <test-method status="PASS" signature="initWebDriver()[pri:0, instance:ru.stqa.selenium.SearchMovie@91161c7]" name="initWebDriver" is-config="true" duration-ms="2212" started-at="2016-08-01T23:12:41Z" finished-at="2016-08-01T23:12:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initWebDriver -->
-        <test-method status="PASS" signature="testSearchMovie()[pri:0, instance:ru.stqa.selenium.SearchMovie@91161c7]" name="testSearchMovie" duration-ms="2928" started-at="2016-08-01T00:06:15Z" finished-at="2016-08-01T00:06:18Z">
+        <test-method status="PASS" signature="testSearchMovie()[pri:0, instance:ru.stqa.selenium.SearchMovie@91161c7]" name="testSearchMovie" duration-ms="2869" started-at="2016-08-01T23:12:43Z" finished-at="2016-08-01T23:12:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchMovie -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ru.stqa.selenium.SearchMovie@91161c7]" name="tearDown" is-config="true" duration-ms="193" started-at="2016-08-01T00:06:18Z" finished-at="2016-08-01T00:06:18Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:ru.stqa.selenium.SearchMovie@91161c7]" name="tearDown" is-config="true" duration-ms="199" started-at="2016-08-01T23:12:46Z" finished-at="2016-08-01T23:12:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

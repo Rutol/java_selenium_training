@@ -6,7 +6,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class DelMovie extends TestNgTestBase{
-	
+
+	//Setting menu into required value
+public void setMenu(String elementId, String visibleText) {
+	WebElement menu=driver.findElement(By.id(elementId));
+	new Select(menu).selectByVisibleText(visibleText);
+}
+
   @Test
   public void testDelMovie() throws Exception {
 
@@ -23,13 +29,9 @@ public class DelMovie extends TestNgTestBase{
 
     driver.findElement(By.linkText("Home")).click();  /* Go to home page */
 
- // Select lists to show all movies on one page     
-    WebElement menu1=driver.findElement(By.id("category"));
-    WebElement menu2=driver.findElement(By.id("n"));
+    setMenu("category","All categories"); //select show all categories movies 
+    setMenu("n","All results per page"); //select show all movies on page 
 
-    new Select(menu1).selectByVisibleText("All categories");
-    new Select(menu2).selectByVisibleText("All results per page");
-    
     // count quantity of movies before adding
     count_start = driver.findElements(By.xpath("//a[contains(@href,'go=movie')]")).size();
     
@@ -46,12 +48,8 @@ public class DelMovie extends TestNgTestBase{
 
     driver.findElement(By.linkText("Home")).click(); /* Go to home page */
 
-// Select lists to show all movies on one page     
-    menu1=driver.findElement(By.id("category"));
-    menu2=driver.findElement(By.id("n"));
-
-    new Select(menu1).selectByVisibleText("All categories");
-    new Select(menu2).selectByVisibleText("All results per page");
+    setMenu("category","All categories"); //select show all categories movies 
+    setMenu("n","All results per page"); //select show all movies on page 
 
     // count quantity of movies after adding
     count_finish = driver.findElements(By.xpath("//a[contains(@href,'go=movie')]")).size();

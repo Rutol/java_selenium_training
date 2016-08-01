@@ -9,13 +9,17 @@ import org.testng.Assert;
 
 public class SearchMovie extends TestNgTestBase{
 
+	int count=0, count_search=0;
+	
+	//Setting menu into required value
+public void setMenu(String elementId, String visibleText) {
+	WebElement menu=driver.findElement(By.id(elementId));
+	new Select(menu).selectByVisibleText(visibleText);
+}
 
   @Test
   public void testSearchMovie() throws Exception {
 
-	//  int count_exist=0, count_notexist=0;
-
-	  
 	// Login block    
 	driver.get(baseUrl + "/php4dvd/");
 	driver.findElement(By.id("username")).clear();
@@ -42,13 +46,11 @@ public class SearchMovie extends TestNgTestBase{
 	
     driver.findElement(By.linkText("Home")).click();  /* Go to home page */
 
- // Select lists to show all movies on one page      
-    WebElement menu1=driver.findElement(By.id("category"));
-    WebElement menu2=driver.findElement(By.id("n"));
+    setMenu("category","All categories"); //select show all categories movies 
+    setMenu("n","All results per page"); //select show all movies on page 
 
-    new Select(menu1).selectByVisibleText("All categories");
-    new Select(menu2).selectByVisibleText("All results per page");
-
+    count = driver.findElements(By.xpath("//a[contains(@href,'go=movie')]")).size();
+    
 	//Search existing movie
 	driver.findElement(By.id("q")).clear();
     driver.findElement(By.id("q")).sendKeys("Abra"); 
@@ -56,8 +58,10 @@ public class SearchMovie extends TestNgTestBase{
 
     // Waiting results
     WebDriverWait wait = new WebDriverWait(driver, 2);
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("results")));    
-    Assert.assertTrue(driver.findElement(By.id("results")).findElements(By.tagName("a")).size() > 0);
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("results")));
+    
+    count_search=driver.findElement(By.id("results")).findElements(By.tagName("a")).size();
+    Assert.assertTrue((count_search > 0)&&(count_search<count));
     
     //Search not existing movie
 	driver.findElement(By.id("q")).clear();
